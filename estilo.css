@@ -1,98 +1,98 @@
-/* A tag body representa todo o corpo da página visível na tela */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
 body {
-    /* Define o tom de fundo da página inteira para um rosa bem suave */
-    background-color: #fff0f5; 
-
-    /* Define a fonte dos textos para uma escrita mais limpa e moderna */
-    font-family: Arial, sans-serif; 
-
-    /* Remove as margens padrão do navegador para ocupar a tela corretamente */
-    margin: 0; 
-
-    /* Adiciona um espaço interno nas bordas da tela */
-    padding: 20px; 
-
-    /* Ativa o Flexbox no corpo da página */
-    display: flex; 
-
-    /* Centraliza o conteúdo horizontalmente no meio da tela */
-    justify-content: center; 
-
-    /* Alinha os itens ao centro no eixo vertical */
-    align-items: center; 
-
-    /* Garante que o corpo ocupe pelo menos a altura inteira da tela visual */
-    min-height: 100vh; 
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    color: #4a2c35;
+    line-height: 1.7;
+    padding: 30px;
 }
 
-/* A classe .container representa o bloco principal de conteúdo */
+/* Header */
+header {
+    background-color: #e91e63;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(150, 70, 100, 0.2);
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+}
+
+/* Main */
 .container {
-    /* Ativa o Flexbox dentro do container principal */
-    display: flex; 
-
-    /* Organiza todos os elementos filhos (título, parágrafos, imagem) em coluna (um abaixo do outro) */
-    flex-direction: column; 
-
-    /* Centraliza os elementos na horizontal dentro do container */
-    align-items: center; 
-
-    /* Define a cor de fundo do cartão para branco */
-    background-color: #ffffff; 
-
-    /* Limita a largura máxima do cartão para não ficar muito espalhado em telas grandes */
-    max-width: 600px; 
-
-    /* Adiciona um espaço de preenchimento dentro do cartão */
-    padding: 30px; 
-
-    /* Arredonda as pontas do cartão */
-    border-radius: 15px; 
-
-    /* Adiciona uma sombra suave para dar efeito de relevo rosa */
-    box-shadow: 0 4px 10px rgba(219, 112, 147, 0.3); 
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fce4ec;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(150, 70, 100, 0.15);
 }
 
-/* A tag h1 representa o título principal do documento */
-h1 {
-    /* Define a cor do texto do título para um rosa forte */
-    color: #c71585; 
-
-    /* Define o alinhamento do texto para centralizado */
-    text-align: center; 
-
-    /* Adiciona uma margem na parte inferior para afastar o título dos parágrafos */
-    margin-bottom: 20px; 
+/* Título do conteúdo */
+h2 {
+    text-align: center;
+    color: #c2185b;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-family: Georgia, serif;
 }
 
-/* A tag p representa os parágrafos de texto */
+/* Parágrafos */
 p {
-    /* Define a cor do texto para um cinza escuro para facilitar a leitura */
-    color: #4a4a4a; 
-
-    /* Aumenta a altura entre as linhas para tornar a leitura mais agradável */
-    line-height: 1.6; 
-
-    /* Alinha o texto das frases de forma justificada */
-    text-align: justify; 
-
-    /* Define um espaçamento abaixo de cada parágrafo */
-    margin-bottom: 15px; 
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
-/* A tag img representa a imagem da página */
+/* Imagem */
 img {
-    /* Garante que a imagem nunca ultrapasse a largura máxima do container */
-    max-width: 100%; 
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 30px auto 0;
+    border-radius: 15px;
+    border: 4px solid #f48fb1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-    /* Mantém a proporção da altura automaticamente sem distorcer a imagem */
-    height: auto; 
+/* Efeito ao passar o mouse na imagem */
+img:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
 
-    /* Arredonda as pontas da própria imagem */
-    border-radius: 10px; 
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
 
-    /* Adiciona uma borda fina em tom de rosa choque ao redor da imagem */
-    border: 3px solid #ff69b4; 
+    header h1 {
+        font-size: 30px;
+    }
 
-    /* Adiciona uma margem no topo da imagem para afasta-la dos textos */
-    margin-top: 15px; 
+    .container {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
